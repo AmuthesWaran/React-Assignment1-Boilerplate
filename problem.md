@@ -32,7 +32,7 @@ By the end of the assignment you should be able to understand
 2. Clone the boilerplate repository and cd into it
 3. Install dependencies npm install
 4. Run the backend json-server server/db.json which shall run on port:3000
-5. Run the frontend npm run start which shall run on port:4200
+5. Run the frontend npm run start which shall run on port:3001
 
 ## The NEWS API to be used as data source
 - To get category wise news use the following end point. [Category News endpoint]
