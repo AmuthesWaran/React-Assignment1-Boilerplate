@@ -12,8 +12,9 @@ function App() {
     <div>
       <Header />
       <br />
-      {/* <Cards /> */}
+      
       <Dashboard />
+      
       <Footer />
     </div>
 

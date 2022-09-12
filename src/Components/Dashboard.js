@@ -8,10 +8,13 @@ const Dashboard = () => {
     const[trending,setTrending] =  useState([]);
     const[readlaterdb,setReadlaterdb] =useState([]);
 
-    useEffect(()=>{
-        axios.get(`https://newsapi.org/v2/top-headlines?country=in&apikey=dbaefe94344341b6b68c526c4070fe6f`)
+       // axios.get(`https://newsapi.org/v2/top-headlines?country=in&apikey=dbaefe94344341b6b68c526c4070fe6f`)
         // https://newsapi.org/v2/everything?q=bitcoin&apiKey=dbaefe94344341b6b68c526c4070fe6f
 
+
+    useEffect(()=>{
+        axios.get(`https://newsapi.org/v2/top-headlines?category=technology&language=en&country=in&apikey=dbaefe94344341b6b68c526c4070fe6f&page=1`)
+ 
         .then((res)=>{
             setTrending(res.data.articles);
             // console.log(res.data.articles);
@@ -39,9 +42,9 @@ const Dashboard = () => {
             <div className="row">
         {trending.map((news)=>(
             
-            <div className="col-md-3">
+            <div className="col-sm-3" key={news.url} >
             <Cards 
-            index={news.index}
+            
             description={news.description}
             urlToImage = {news.urlToImage}
             title = {news.title}
