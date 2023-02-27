@@ -14,7 +14,7 @@ const Dashboard = () => {
 
 
   useEffect(() => {
-    axios.get(`https://newsapi.org/v2/top-headlines?category=technology&language=en&country=in&apikey=dbaefe94344341b6b68c526c4070fe6f&page=1`)
+    axios.get(`https://newsapi.org/v2/top-headlines?country=in&apiKey=dbaefe94344341b6b68c526c4070fe6f`)
 
       .then((res) => {
         setTrending(res.data.articles);
